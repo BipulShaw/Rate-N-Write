@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a review</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/editor.css">
+</head>
+<body>
+    <div class="banner">
+        <h1 class="heading">
+            <span id="uploadban">Upload a banner image</span>
+        </h1>
+        <input type="file" accept="image/*" id="banner-upload" hidden>
+        <label for="banner-upload" class="banner-upload-btn"><img src="img/upload.png" alt="upload banner"></label>
+    </div>
+    
+    <div class="blog">
+        <div>
+            <form>
+                <b>Category: </b>
+                <select id = "myList">  
+                    <option>--Choose Category--</option>  
+                    <option> Mobiles </option>  
+                    <option> Laptops </option>  
+                    <option> Electronics </option>  
+                    <option> Bikes </option>  
+                </select>  
+            </form>
+        </div>
+        <textarea type="text" class="title" placeholder="Title here..."></textarea>
+        <div>
+            <b>Your Score: </b>
+            <input type="number" id="score">
+        </div>
+        
+        <textarea type="text" class="article" placeholder="Start the body from here..."></textarea>
+    </div>
+
+    <div class="blog-options">
+        <input type="file" accept="image/*" id="image-upload" hidden>
+        <label for="image-upload" class="button button2">Upload Image</label>
+        <button class="button button1">Publish</button>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+    <script src="js/firebase.js"></script>
+    <script src="js/editor.js"></script>
+</body>
+</html>

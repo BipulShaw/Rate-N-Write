@@ -1,0 +1,77 @@
+.blog, .article{
+    position: relative;
+    height: fit-content;
+    padding-bottom: 0;
+}
+
+.article, .title{
+    min-height: auto;
+    height: fit-content;
+    padding: 0 10px;
+    white-space: normal;
+}
+
+.published{
+    margin: 20px 0 60px;
+    padding: 0 10px;
+    font-style: italic;
+    font-size: large;
+    color: rgba(0, 0, 0, 0.5);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.category{
+    margin: 20px 0 60px;
+    padding: 0 10px;
+    font-style: italic;
+    font-size: large;
+    color: rgba(0, 0, 0, 0.5);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.score{
+    margin: 20px 0 60px;
+    padding: 0 10px;
+    font-style: normal;
+    font-size: large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.published span{
+    font-weight: 700;
+    font-size: large;
+    font-style: normal;
+}
+
+.category span{
+    font-weight: 700;
+    font-size: large;
+    font-style: normal;
+}
+
+.score span{
+    font-weight: 700;
+    font-size: large;
+    font-style: normal;
+}
+
+.article *{
+    margin: 30px 0;
+    color: #2d2d2d;
+}
+
+.article-image{
+    max-width: 100%;
+    max-height: 400px;
+    display: block;
+    margin: 30px auto;
+    object-fit: contain;
+}
+
+.sub-heading{
+    padding: 0 5vw;
+    color: #2d2d2d;
+    font-weight: 500;
+    font-size: 40px;
+    margin-top: 80px;
+}
