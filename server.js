@@ -7,7 +7,11 @@ const cloudinary = require('cloudinary').v2;
 const app = express();
 app.use(express.static(initial_path));
 
-app.use(fileupload())
+app.use(fileupload(
+    {
+        useTempFiles: true
+    }
+))
 
 cloudinary.config({ 
     cloud_name: 'dgc09axyo', 
@@ -27,9 +31,8 @@ app.get('/editor', (req, res) => {
 
 app.post('/upload', (req, res) => {
     const file = req.files.image;
-    cloudinary.uploader.upload(file, (err, result) => {
+    cloudinary.uploader.upload(file.tempFilePath, (err, result) => {
         console.log(result);
-        let path = result.url;
         //create upload
         res.json(result.url)
     });
