@@ -26,7 +26,7 @@ const setupBlog = (data) => {
         document.getElementById("score_col").style.color = "#42a832";
     }
     else if(parseInt(data.scor) >= 51 && parseInt(data.scor) < 80){
-        document.getElementById("score_col").style.color = "bfa41f";
+        document.getElementById("score_col").style.color = "#bfa41f";
     }
     else{
         document.getElementById("score_col").style.color = "#c7381c";

@@ -9,6 +9,13 @@
     <link rel="stylesheet" href="css/editor.css">
 </head>
 <body>
+    <nav class="navbar">
+        <img src="img/logo.png" class="logo" alt="">
+        <ul class="links-container">
+            <li class="link-item"><a href="/" class="link">Home</a></li>
+            <li class="link-item"><a href="/editor" class="link">Write a review</a></li>
+        </ul>
+    </nav>
     <div class="banner">
         <h1 class="heading">
             <span id="uploadban">Upload a banner image</span>
@@ -18,22 +25,23 @@
     </div>
     
     <div class="blog">
-        <div>
+        <div class = "details">
             <form>
-                <b>Category: </b>
-                <select id = "myList">  
-                    <option>--Choose Category--</option>  
-                    <option> Mobiles </option>  
-                    <option> Laptops </option>  
-                    <option> Electronics </option>  
-                    <option> Bikes </option>  
+                <b class="details_items">Category: </b>
+                <select id = "myList" class="details_items">  
+                    <option style="font-family: Consolas;">Select Category</option>  
+                    <option style="font-family: Consolas;"> Mobiles </option>  
+                    <option style="font-family: Consolas;"> Laptops </option>  
+                    <option style="font-family: Consolas;"> Electronics </option>  
+                    <option style="font-family: Consolas;"> Bikes </option> 
                 </select>  
             </form>
+            <b class="details_items">Your Score: </b>
+            <input class="details_items" type="number" id="score">
         </div>
         <textarea type="text" class="title" placeholder="Title here..."></textarea>
         <div>
-            <b>Your Score: </b>
-            <input type="number" id="score">
+            
         </div>
         
         <textarea type="text" class="article" placeholder="Start the body from here..."></textarea>
