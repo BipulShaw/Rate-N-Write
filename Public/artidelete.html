@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Articles</title>
+    <link rel="stylesheet" href="css/delete.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body style="background-color: rgb(209, 206, 206);">
+    <nav class="navbar">
+        <img src="img/logo.png" class="logo" alt="">
+        <ul class="links-container">
+            <li class="link-item"><a href="/" class="link">Home</a></li>
+            <li class="link-item"><a href="/editor" class="link">Write a review</a></li>
+			<li class="link-item"><a href="/artidelete" class="link">Signed in as admin</a></li>
+        </ul>
+    </nav>
+    <div class="admin_h">
+        <h3 class="category-title" style="font-family: 'Courier New', monospace; font-weight:bold">Reported Articles</h3>
+    </div>
+    <main>
+        <section class = "r_articles">
+            <div class = "r_arti">
+
+            </div>    
+        </section> 
+    </main>
+    <div>
+        <div class="foot_cont">
+            <i>Please note that the changes (approval/deletion) might take some time to show up.</i>
+        </div>
+        <div class="foot_cont">
+            <i>Made by: Bipul Kumar Shaw, Undergrad @IIEST Shibpur 2019-23</i>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+
+    <script src="js/firebase.js"></script>
+    <script src="js/delete.js"></script>
+
+    
+</body>
+</html>

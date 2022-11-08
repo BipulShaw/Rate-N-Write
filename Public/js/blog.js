@@ -17,11 +17,13 @@ const setupBlog = (data) => {
     const publish = document.querySelector('.published');
     const cat = document.querySelector('.category');
     const score = document.querySelector('.score');
+    const uname = document.querySelector('.uname');
     banner.style.backgroundImage = `url(${data.bannerImage})`;
 
     titleTag.innerHTML += blogTitle.innerHTML = data.title;
     publish.innerHTML += data.publishedAt;
     cat.innerHTML += data.cat;
+    uname.innerHTML += data.publishedBy;
     if(parseInt(data.scor) >= 80){
         document.getElementById("score_col").style.color = "#42a832";
     }
@@ -74,3 +76,17 @@ const addArticle = (ele, data) => {
         }
     })
 }
+
+const rep_but = document.querySelector(".report_but");
+
+rep_but.addEventListener('click', ()=>{
+    let txt = "Are you sure you want to report this article to the admins?";
+    if(confirm(txt) == true){
+        docRef.update({
+            "reported" : true
+        })
+    }
+    else{
+        alert("The reporting was aborted.");
+    }
+})

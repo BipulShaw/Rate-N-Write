@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RateNWrite | Home</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=opensans" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=opensans" rel="stylesheet"> -->
     <link rel="stylesheet" href="css/home.css">
 
 </head>
@@ -16,6 +16,7 @@
         <ul class="links-container">
             <li class="link-item"><a href="/" class="link">Home</a></li>
             <li class="link-item"><a href="/editor" class="link">Write a review</a></li>
+			<li class="link-item"><a href="/delete" class="link">Admin Login</a></li>
         </ul>
     </nav>
     <header class="header" style="padding-top: 30px;">
@@ -118,5 +119,17 @@
 	<div>
 		<h3 class="category-title" style="font-family: 'Courier New', monospace; display:flex; justify-content:center  ; align-items:center;">Latest posts</h3>
 	</div>
+	
+	<div class="cards">
+        
+    </div>
+	<div class="foot_cont">
+		<i>Made by: Bipul Kumar Shaw, Undergrad @IIEST Shibpur 2019-23</i>
+	</div>
+	<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+
+    <script src="js/firebase.js"></script>
+	<script src="js/home.js"></script>
 </body>
 </html>

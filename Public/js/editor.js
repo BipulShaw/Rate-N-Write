@@ -2,6 +2,7 @@ const category = document.querySelector('#myList');
 const blogTitleField = document.querySelector('.title');
 const yourscore = document.querySelector('#score');
 const articleFeild = document.querySelector('.article');
+const username = document.querySelector('#urname')
 
 // Banner
 const bannerImage = document.querySelector('#banner-upload');
@@ -54,7 +55,7 @@ const addImage = (imagepath, alt) => {
 let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
 button1.addEventListener('click', () => {
-    if(articleFeild.value.length && blogTitleField.value.length){
+    if(articleFeild.value.length > 300 && blogTitleField.value.length){
         // generating id
         let letters = 'abcdefghijklmnopqrstuvwxyz';
         let blogTitle = blogTitleField.value.split(" ").join("-");
@@ -74,7 +75,9 @@ button1.addEventListener('click', () => {
             cat: category.value,
             scor: yourscore.value,
             bannerImage: bannerPath,
-            publishedAt: `${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`
+            publishedAt: `${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`,
+            publishedBy: username.value,
+            reported: false
         })
         .then(() => {
             location.href = `/${docName}`;
@@ -82,5 +85,8 @@ button1.addEventListener('click', () => {
         .catch((err) => {
             console.error(err);
         })
+    }
+    else if(articleFeild.value.length < 300){
+        alert("Your article is too short, please elaborate.")
     }
 })

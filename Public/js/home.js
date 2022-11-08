@@ -2,12 +2,7 @@ const blogSection = document.querySelector('.cards');
 
 db.collection("reviews").get().then((blogs) => {
     blogs.forEach(blog => {
-        let blog_content = blog.data();
-        if(blog_content.cat == "Bikes"){
-            if(blog.id != decodeURI(location.pathname.split("/").pop())){
-                createBlog(blog);
-            }
-        }
+        createBlog(blog);
     })
 })
 

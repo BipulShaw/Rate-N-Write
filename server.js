@@ -27,9 +27,16 @@ app.get('/editor', (req, res) => {
     res.sendFile(path.join(initial_path, "editor.html"));
 })
 
+app.get('/delete', (req, res) => {
+    res.sendFile(path.join(initial_path, "delete.html"));
+})
+
+app.get('/artidelete', (req, res) => {
+    res.sendFile(path.join(initial_path, "artidelete.html"));
+})
 //Upload
 
-app.post('/upload', (req, res) => {
+app.post('/upload', (req, res) => { 
     const file = req.files.image;
     cloudinary.uploader.upload(file.tempFilePath, (err, result) => {
         console.log(result);
@@ -57,9 +64,6 @@ app.get("/:blog", (req, res) => {
     res.sendFile(path.join(initial_path, "blog.html"));
 })
 
-app.use((req, res) => {
-    res.json("404");
-})
 
 
 app.listen(port, () => {
